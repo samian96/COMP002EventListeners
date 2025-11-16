@@ -11,14 +11,14 @@
 // Hint: keeping track of the size in percentage might be easier.
 // Hint: Make sure you quote the emoji characters. They are strings, after all.
 // Hint: document.getElementById("balloon") will get the balloon element on the page.
-document.addEventListener("resize", arrowKeyUp).onclick = function() {
-    arrowKeyUp();
-}
+const balloon = document.getElementById("balloon");
 
-function arrowKeyUp() {
-    let txt = x += 1;
-    document.getElementById("balloon").innerHTML = txt;
-    console.log(arrowKeyUp);
+let size = 20;
+
+window.addEventListener("keyDown", (event) =>) {
+    if (event.key === "arrowUp" || event.key === "arrowDown" ) {
+        event.preventDefault();
+    }
 }
 
 
