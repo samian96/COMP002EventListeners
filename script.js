@@ -18,7 +18,11 @@ let size = 20;
 window.addEventListener("keyDown", (event) =>) {
     if (event.key === "arrowUp" || event.key === "arrowDown" ) {
         event.preventDefault();
-    }
+    } 
+    if (event.key === "arrowUp") {
+        size += 10;
+        balloon.style.fontSize = size = "px";
+    } else if
 }
 
 
