@@ -11,8 +11,14 @@
 // Hint: keeping track of the size in percentage might be easier.
 // Hint: Make sure you quote the emoji characters. They are strings, after all.
 // Hint: document.getElementById("balloon") will get the balloon element on the page.
-const balloon = document.getElementById("balloon");
+let b = document.querySelector ("balloon")
+let size;
 
+function sizeAdjust(newSize) {
+    size = sizeAdjust;
+    b.computedStyleMap.fontSize = size + "px";
+}
+sizeAdjust(20);
 
 
 
