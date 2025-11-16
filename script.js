@@ -20,6 +20,15 @@ function sizeAdjust(newSize) {
 }
 sizeAdjust(20);
 
+function arrowKeyUp(event) {
+    if (event.key == "ArrowUp") {
+        if (size > 70) {
+            b.textContent = "💥";
+            document.body.removeEventListener("keydown", handleArrow );
+        }
+    }
+}
+
 
 
 // 2. The index.html page has a tabbed layout. Make the default state of the layout show
