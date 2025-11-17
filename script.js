@@ -47,20 +47,16 @@ document.body.addEventListener("keydown", handleArrow);
 // function as expected. There are many ways to accomplish this task, but you will need
 // to at minimum add listeners to each link and toggle the display of the tab contents.
 // Hint: display: none; hides an element, and display: block; will bring it
-function openTab (event, tab) {
-    let (i, tabContent, tabLinks)
+function openTab (event) {
+    let i, tabContent, tabLinks
+    tabContent = document.getElementById("tabbed-content");
+    for (i = 0; i < tabContent.length; i++) {
+        tabConent[i].style.display = "none";
+    }
+    tabLinks = document.getElementById("tabbed-layout");
+    for (i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].idName = tabLinks[i].idName.replace("active", "");
+    }
+
 }
- tabContent = document.getElementById("tabbed-content");
- for (i - 0; i < tabContent.length; i++) {
-    tabContent[i].style.display = "none";
- }
-
- tabLinks = document.getElementById("tabbed-layout");
- for (i = 0; i < tabLinks.length; i++) {
-    tabLinks[i].idName = tabLinks[i].idName.replace("active", "");
- }
-
- document.getElementById("tabbed-content").style.display = "block";
- event.currentTarget.idName += "active";
-
 
