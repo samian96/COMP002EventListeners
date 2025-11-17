@@ -11,23 +11,32 @@
 // Hint: keeping track of the size in percentage might be easier.
 // Hint: Make sure you quote the emoji characters. They are strings, after all.
 // Hint: document.getElementById("balloon") will get the balloon element on the page.
-let b = document.querySelector ("balloon")
+let b = document.getElementById("balloon");
 let size;
 
 function sizeAdjust(newSize) {
-    size = sizeAdjust;
-    b.computedStyleMap.fontSize = size + "px";
+  size = newSize;
+  b.style.fontSize = size + "px";
 }
+
 sizeAdjust(20);
 
-function arrowKeyUp(event) {
-    if (event.key == "ArrowUp") {
-        if (size > 70) {
-            b.textContent = "💥";
-            document.body.removeEventListener("keydown", handleArrow );
-        }
+function handleArrow(event) {
+  if (event.key === "ArrowUp") {
+    if (size > 70) {
+      b.textContent = "💥";
+      document.body.removeEventListener("keydown", handleArrow);
+    } else {
+      sizeAdjust(size * 1.2);
+      event.preventDefault();
     }
+  } else if (event.key === "ArrowDown") {
+    sizeAdjust(size * 0.9);
+    event.preventDefault();
+  }
 }
+
+document.body.addEventListener("keydown", handleArrow);
 
 
 
