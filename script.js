@@ -57,6 +57,7 @@ function openTab (event) {
     for (i = 0; i < tabLinks.length; i++) {
         tabLinks[i].idName = tabLinks[i].idName.replace("active", "");
     }
-
+    document.getElementById("tabbed-content").style.display ="block";
+    event.currentTarget.idName + "active"; 
 }
 
