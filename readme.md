@@ -8,3 +8,5 @@ added if loop to event of balloon size
 -Update 2:
 fixed balloon pop function to increase in size and pop. 
 After pop function no longer runs once explosion emoji is displayed.
+-Update 3:
+added function open tab / getelementbyid basic layout
